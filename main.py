@@ -15,7 +15,6 @@ class CssiUser(ndb.Model):
   first_name = ndb.StringProperty()
   last_name = ndb.StringProperty()
   email = ndb.StringProperty()
-  meterValue = ndb.StringProperty()
 
 class MainHandler(webapp2.RequestHandler):
   def get(self):
@@ -61,13 +60,15 @@ class MainHandler(webapp2.RequestHandler):
 
 class showMood(webapp2.RequestHandler):
     def post(self):
-        moodTemplate = the_jinja_env.get_template("templates/mood_meter_page.html")
-        myMood = CssiUser(
-            meterValue=self.request.get('Mood')
-        )
-        myMood.put()
-        self.response.write(myMood.meterValue)
-
+        if self.request.get('Mood') == '33':
+            index = the_jinja_env.get_template("templates/depressed_placeholder.html")
+            self.response.write(index.render())
+        elif self.request.get('Mood') == '66':
+            index = the_jinja_env.get_template("templates/mad_placeholder.html")
+            self.response.write(index.render())
+        elif self.request.get('Mood') == '100':
+            index = the_jinja_env.get_template("templates/happy_placeholder.html")
+            self.response.write(index.render())
 
 app = webapp2.WSGIApplication([
         ('/', MainHandler),
