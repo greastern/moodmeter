@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    <div class="jumbotron jumbofluid-fluid">
+    <div id="jumbo" class="jumbotron jumbofluid-fluid">
         <h2 class="Heading"> Welcome to our Mood Meter! Please log in to your google account. </h2>
-
+<a href="{{login_url}}" style="margin:300px auto; text-align:center; display:block; width:120px; color: black; ">Click to Login</a>
       </div>
-      <a href="{{login_url}}">Sign in</a>
+
+
 
   </body>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -20,6 +21,17 @@
     h2 { text-align: center;
 
 
+
     }
+
+    #jumbo{
+      background-image: url(https://cdn.dribbble.com/users/225707/screenshots/2958729/attachments/648705/straight-loader.gif);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      height: 1000px;
+
+    }
+
+
   </style>
 </html>
