@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <div class="outer"></div>
+    <div class="inner"></div>
+
+    <div class="circle__box">
+  <div class="circle__wrapper circle__wrapper--right">
+    <div class="circle__whole circle__right"></div>
+  </div>
+  <div class="circle__wrapper circle__wrapper--left">
+    <div class="circle__whole circle__left"></div>
+  </div>
+</div>
+
+<div class="percentage" style="color:#de413e;">
+  <h1>66%</h1>
+</div>
+
+<div class="mad_text">
+    <h1>Mad</h1>
+</div>
+
+  </body>
+    <style type="text/css">
+    .circle__box {
+      width: 440px;
+      height: 440px;
+      margin: 110px auto;
+      position: absolute;
+      top: 26.3%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .circle__wrapper {
+      width: 220px;
+      height: 440px;
+      position: absolute;
+      top: 0;
+      overflow: hidden;
+    }
+
+    .circle__wrapper--right {
+      right: 0;
+    }
+
+    .circle__wrapper--left {
+      left: 0;
+    }
+
+    .circle__whole {
+      width: 352px;
+      height: 352px;
+      border: 44px solid transparent;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      transform: rotate(-135deg);
+    }
+
+    .circle__right {
+      border-top: 44px solid #de413e;
+      border-right: 44px solid #de413e;
+      right: 2.2px;
+      animation: circleRight 5s linear forwards;
+    }
+
+    .circle__left {
+      border-bottom: 44px solid #de413e;
+      border-left: 44px solid #de413e;
+      left: 2.2px;
+      animation: circleLeft 5s linear forwards;
+    }
+
+
+      @keyframes circleRight {
+        0% {
+          transform: rotate(-135deg);
+        }
+        50%,
+        100% {
+          transform: rotate(45deg);
+        }
+      }
+
+      @keyframes circleLeft {
+        0%,
+        50% {
+          transform: rotate(-135deg);
+        }
+        100% {
+          -webkit-transform: rotate(-75deg);
+        }
+      }
+
+      .outer {
+        border: 2px solid gray;
+        background-color: #FFFFFF;
+        height: 472px;
+        border-radius:50%;
+        width: 472px;
+        position: absolute;
+        top: 41.5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        }
+
+      .inner {
+        border: 2px solid gray;
+        background-color: #FFFFFF;
+        height: 312px;
+        border-radius:50%;
+        width: 312px;
+        position: absolute;
+        top: 41.5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .mad_text {
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        font-size:35px;
+      }
+
+      .percentage {
+        position: absolute;
+        top: 42%;
+        left: 50.5%;
+        transform: translate(-50%, -50%);
+        font-family: Courier New;
+        font-size:50px;
+      }
+
+    </style>
+
+</html>
